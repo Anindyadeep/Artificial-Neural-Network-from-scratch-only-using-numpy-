@@ -35,5 +35,3 @@ print("CURRENT ACC TEST: ", accuracy(A_test, Y_test))
 
 plt.plot(LOSS_TRAIN)
 plt.plot(LOSS_VAL)
-#plt.plot(ACC_TRAIN)
-#plt.plot(ACC_VAL)
