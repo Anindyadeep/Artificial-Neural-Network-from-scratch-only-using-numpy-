@@ -25,7 +25,7 @@ def compute_grads(cache, params, Y):
     l = layers - 1
     Y_hat = cache["A" + str(l)]
 
-    dA_prev = -(np.divide(Y, Y_hat) - np.divide(1 - Y, 1 - Y_hat))
+    dA_prev = -(np.divide(Y, Y_hat + 1e-8) - np.divide(1 - Y, 1 - Y_hat))
 
     while l >= 1:
         dA_curr = dA_prev  # in order to make a match with the order in the loop
